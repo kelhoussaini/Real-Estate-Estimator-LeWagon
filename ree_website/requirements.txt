@@ -6,3 +6,4 @@ folium
 geopy
 matplotlib
 seaborn
+streamlit_folium
