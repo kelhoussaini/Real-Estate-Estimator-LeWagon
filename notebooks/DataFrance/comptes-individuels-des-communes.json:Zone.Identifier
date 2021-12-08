@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://www.data.gouv.fr/
+HostUrl=https://data.economie.gouv.fr/explore/dataset/comptes-individuels-des-communes/download?format=json&timezone=Europe/Berlin&use_labels_for_header=false
