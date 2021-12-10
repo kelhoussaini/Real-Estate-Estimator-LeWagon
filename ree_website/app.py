@@ -86,12 +86,12 @@ geodf = df2[['code_dep',f'{param}']]
 
 #Center the Map around the Point of Interest
 def center(ville):
-   address = f'{ville}, FR'
-   geolocator = Nominatim(user_agent="id_explorer")
-   location = geolocator.geocode(address)
-   latitude = location.latitude
-   longitude = location.longitude
-   return latitude, longitude
+    address = f'{ville}, FR'
+    geolocator = Nominatim(user_agent="id_explorer")
+    location = geolocator.geocode(address)
+    latitude = location.latitude
+    longitude = location.longitude
+    return latitude, longitude
 
 # initialize the first map and store it in a m object
 m = folium.Map(location=center('Paris'), zoom_start=5)
