@@ -277,8 +277,6 @@ url= f'http://0.0.0.0:8000/predict?surface={surface}&pieces={pieces}&surface_ter
 if st.button('Prix estimé'):
     response = requests.get(url, params=param_dict).json()
     col1, col2 = st.columns(2)
-    col2.metric("", f"{response['reestimodel']}€")
+    col2.metric("", f"{round(response['reestimodel'], 2)}€")
     
     
-#http://127.0.0.1:8000/predict?surface=200&pieces=3&surface_terrain=0&dependancy=0&Arrondissement10=0&Arrondissement11=0&Arrondissement12=0&Arrondissement13=0&Arrondissement14=0&Arrondissement15=0&Arrondissement16=0&Arrondissement1=0&Arrondissement2=0&Arrondissement3=0&Arrondissement4=0&Arrondissement5=0&Arrondissement6=1&Arrondissement7=0&Arrondissement8=0&Arrondissement9=0&is_house=0&is_appart=1
-
