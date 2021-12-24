@@ -1,0 +1,39 @@
+# packaging
+pip>=9
+setuptools>=26
+twine
+wheel>=0.29
+
+# data science
+numpy
+pandas
+scikit-learn
+#xgboost
+
+# API
+mlflow
+fastapi
+uvicorn
+
+# SQL
+#pymysql
+#sqlalchemy
+
+# utilities
+six>=1.14
+joblib
+#memoized-property
+# termcolor
+
+# website
+requests
+
+
+
+streamlit
+
+#folium
+#geopy
+#matplotlib
+#seaborn
+xgboost==1.4.2

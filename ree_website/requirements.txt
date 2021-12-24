@@ -1,9 +1,47 @@
-streamlit
-pandas
+# packaging
+pip>=9
+setuptools>=26
+twine
+wheel>=0.29
+
+# data science
 numpy
-requests
-folium
-geopy
+pandas
+scikit-learn
 matplotlib
 seaborn
+
+# tests/linter
+black
+coverage
+flake8
+pytest
+yapf
+
+# API
+gcsfs
+google-cloud-storage
+mlflow
+s3fs
+fastapi
+uvicorn
+
+# SQL
+pymysql
+sqlalchemy
+
+# utilities
+six>=1.14
+joblib
+memoized-property
+# termcolor
+mlflow
+
+# website
+streamlit
+geopy
+folium
 streamlit_folium
+requests
+xgboost==1.4.2
+

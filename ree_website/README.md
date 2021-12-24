@@ -1,3 +1,11 @@
+#either : streamlit run app.py  
+    such as : pwd --> ..../ree_website
+    
+   #to get frontend streamlit
+    
+#Or : docker-compose build, then docker compose up
+#pwd --> ..../code/kelhoussaini/Real-Estate-Estimator-LeWagon
+
 -------------------------------------
 # VISUALISATION - CARTES & PREDICTION
 -------------------------------------

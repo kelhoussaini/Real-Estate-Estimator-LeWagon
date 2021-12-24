@@ -8,10 +8,24 @@ COPY reestimator /reestimator
 # COPY /path/to/your/credentials.json /credentials.json !!!!!!!!!!! Complete the path
 # to credential file from Jean GCP account cf. README to know how to do it
 
+COPY reeWebsite_streamlit.py /reeWebsite_streamlit.py 
+
+COPY test_file.py /test_file.py 
+
+COPY ree_website/boxplot_appartements_Marseille.png  /boxplot_appartements_Marseille.png
+COPY ree_website/boxplot_maisons_Marseille.png  /boxplot_maisons_Marseille.png
+#above, my updated file
+
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 
-CMD uvicorn api.fast:app --host 0.0.0.0 --port $PORT
 
+
+EXPOSE 8503
+
+#CMD uvicorn api.fast:app --host 0.0.0.0 --port $PORT
+
+CMD streamlit run test_file.py
+#reeWebsite_streamlit.py
 
