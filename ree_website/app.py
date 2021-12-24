@@ -230,7 +230,7 @@ st.markdown('''
 ''')
 st.markdown('''
 ''')
-
+# 0.0.0.0   localhost   both they not work , connection error
 #http://localhost:8000/predict?surface=50&pieces=3&arrondissement=3&type_local=Appartement
 
 url = f"http://fastapi_backend:8000/predict?surface={surface}&pieces={pieces}&arrondissement={arrondissement}&type_local={type_local}"

@@ -233,7 +233,7 @@ st.markdown('''
 
 #http://localhost:8000/predict?surface=50&pieces=3&arrondissement=3&type_local=Appartement
 
-url = f"http://127.0.0.1:8000/predict?surface={surface}&pieces={pieces}&arrondissement={arrondissement}&type_local={type_local}"
+url = f"http://0.0.0.0:8000/predict?surface={surface}&pieces={pieces}&arrondissement={arrondissement}&type_local={type_local}"
 
 if st.button('Prix estimé'):
 
