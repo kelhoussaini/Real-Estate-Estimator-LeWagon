@@ -1,26 +1,24 @@
-version: "3"
+version: "3.6"
 
 services:
   fastapi_backend: #api
+    image: kenzael/reestimator_backend
     build: api/ #FastAPI_Backend
     ports:
       - "8000:8000"
-    networks:
-      - deploy_network
+    #networks:
+     # - deploy_network
     container_name: reestimator.backend #.docker
 
   streamlit_frontend: #frontend:
+    image: "kenzael/reestimator_frontend"
     build: ree_website/ #Streamlit_Frontend
     depends_on:
       - fastapi_backend
     ports:
       - "8501:8501"
-    networks:
-      - deploy_network
+    #networks:
+    #  - deploy_network
     container_name: reestimator.frontend #.docker
 
-  
-networks:
-  deploy_network:
-    driver: bridge
   
