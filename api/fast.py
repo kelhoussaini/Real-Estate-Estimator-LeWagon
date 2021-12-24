@@ -60,7 +60,7 @@ def predict(surface, pieces, arrondissement,
     return {"prediction":int(y_pred[0])} 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host='127.0.0.1', port=8000, debug=False)
+    uvicorn.run(app, host='127.0.0.1', port=8000, debug=True)
     # y_pred = predict(50, 2, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     #                  0, 0, 1)
     #y_pred = predict(50, 2, 3,'Maison')
