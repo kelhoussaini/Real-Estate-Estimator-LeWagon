@@ -26,6 +26,6 @@ EXPOSE 8503
 
 #CMD uvicorn api.fast:app --host 0.0.0.0 --port $PORT
 
-CMD streamlit run test_file.py
+CMD streamlit run ree_website/app.py
 #reeWebsite_streamlit.py
 
