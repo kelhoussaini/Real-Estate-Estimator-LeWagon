@@ -1,7 +1,7 @@
-FROM real-estate-estimator-lewagon_streamlit_frontend
-FROM real-estate-estimator-lewagon_fastapi_backend 
+#FROM real-estate-estimator-lewagon_streamlit_frontend
+#FROM real-estate-estimator-lewagon_fastapi_backend 
 
-#python:3.8.6-buster
+FROM python:3.8.6-buster
 
 RUN mkdir /streamlit
 
@@ -20,7 +20,7 @@ COPY ree_website/boxplot_maisons_Marseille.png  streamlit/boxplot_maisons_Marsei
 
 WORKDIR /streamlit
 
-RUN pip install -r requirements.txt
+RUN pip install -r streamlit/requirements.txt
 RUN pip install --upgrade pip
 
 COPY . /streamlit
@@ -29,4 +29,4 @@ COPY . /streamlit
 #EXPOSE 8501
 
 ENTRYPOINT ["streamlit","run"]
-CMD ["ree_website/app.py"]
+CMD ["app-streamlit-to-heroku.py"]
