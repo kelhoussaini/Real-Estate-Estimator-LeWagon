@@ -1,4 +1,6 @@
-FROM real-estate-estimator-lewagon 
+FROM real-estate-estimator-lewagon_streamlit_frontend
+FROM real-estate-estimator-lewagon_fastapi_backend 
+
 #python:3.8.6-buster
 
 RUN mkdir /streamlit
