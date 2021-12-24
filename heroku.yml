@@ -1,3 +1,3 @@
 build:
   docker:
-    web: ree_website/Dockerfile
+    web: Dockerfile #ree_website/
