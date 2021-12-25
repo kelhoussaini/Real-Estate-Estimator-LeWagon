@@ -226,6 +226,19 @@ param_dict = dict(
 
 # url = "https://reestimatordocker-jw6jz6q2fq-ew.a.run.app/predict" LeWagon's project
 
+
+
+data_to_predict = np.concatenate((np.array([surface]), np.array([pieces]), np.array([surface_terrain]),
+        np.array([dependancy]), arrondissements, local))
+
+X_pred = pd.DataFrame(data_to_predict).T
+    
+model = joblib.load('XGBoost.joblib')
+test_scal = joblib.load('robustscaler.joblib')
+X_scaled = test_scal.transform(X_pred)
+y_pred = model.predict(X_scaled)
+ 
+
 st.markdown('''
 ''')
 st.markdown('''
@@ -233,17 +246,18 @@ st.markdown('''
 
 #http://localhost:8000/predict?surface=50&pieces=3&arrondissement=3&type_local=Appartement
 
-url = f"http://0.0.0.0:8000/predict?surface={surface}&pieces={pieces}&arrondissement={arrondissement}&type_local={type_local}"
+#url = f"http://0.0.0.0:8000/predict?surface={surface}&pieces={pieces}&arrondissement={arrondissement}&type_local={type_local}"
 
 if st.button('Prix estimé'):
 
-    response = requests.get(url, params=param_dict).json()     
+    #response = requests.get(url, params=param_dict).json()     
+    response = int(y_pred[0])
     col1, col2, col3 = st.columns(3)
 
     with col1:
         st.write('')
     with col2:
-        st.markdown(f"## {response['prediction']}€")
+        st.markdown(f"## {round(response,2)}€") #response['prediction']
         #st.write(f"{response['prediction']}€")
     with col3:
         st.write('')
