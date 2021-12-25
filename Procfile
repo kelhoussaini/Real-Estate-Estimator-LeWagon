@@ -1,4 +1,4 @@
-#web sh setup.sh && streamlit run app-streamlit-to-heroku.py
+web sh setup.sh && streamlit run app-streamlit-to-heroku.py
 #reeWebsite_streamlit.py 
 #streamlit_app.py
 
@@ -6,4 +6,4 @@
 ## which we already created : https://reestimatorkenzael.herokuapp.com/
 # web: pip install . -U && reestimator-run
 
-web: pip install . -U && real-estate-estimator-kenza-run
+#web: pip install . -U && real-estate-estimator-kenza-run
